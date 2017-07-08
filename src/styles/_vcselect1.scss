@@ -1,0 +1,44 @@
+// select + button
+// vcselect1
+// ==================================================/
+.vcselect1 {
+  // requires select-css
+  // see mq below for height
+
+  input[type=button] {
+    position:relative; 
+    padding: 0px 6px 0px 6px; /* trbl */
+    left: -1px;
+    border: 1px solid #666;
+    background: #999;  
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #000;
+    }
+  }  
+}
+
+// mobile portrait (320x480) 
+@include mq($from: mobile) {
+  .vcselect1 {
+    height: 30px;
+  }
+}
+
+// *mobile landscape (480x320)
+@include mq($from: mobileLandscape) {
+  input[type=text],
+  input[type=button],
+  .custom-select1_01 {
+    height: inherit;
+    vertical-align: text-bottom;
+    // width: 70%;  
+  }
+
+  .custom-select1_01 {
+    margin-left: -1px;
+    width: 15%;
+  }
+}

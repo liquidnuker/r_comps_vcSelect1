@@ -1,6 +1,7 @@
 <template>
   <div>
-    Home.vue
+    <div id="vc_select_mount">
+    </div>
   </div>
 </template>
 <script>
@@ -10,7 +11,21 @@
       }
     },
     mounted: function () {
-      console.log("Home.vue mounted");
+      this.mountSelect1();
+    },
+    methods: {
+      mountSelect1: function() {
+        const Select1 = resolve => {
+          require.ensure(['./Select1.vue'], () => {
+            resolve(require('./Select1.vue'))
+          })
+        };
+
+        new Vue({
+          el: '#vc_select_mount',
+          render: h => h(Select1)
+        })
+      }
     }
   }
 </script>

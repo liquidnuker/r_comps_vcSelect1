@@ -55,7 +55,7 @@ h1 {
 // bg gradient, corners, etc.
 .custom-select1_01 {
   @extend %pos--relative;
-  @extend %display--block;
+  @extend %display--inline-block;
   
   // This is the native select, we're making everything but the text invisible so
   // we can see the button styles in the wrapper 
