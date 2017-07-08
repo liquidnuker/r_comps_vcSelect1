@@ -8,7 +8,7 @@
       <option>item4</option>
       <option>Lorem ipsum dolor sit amet sed do eiusmod</option>
     </select>
-  </div><input type="button" value="Search">
+  </div><input type="button" value="GO!">
 </div>
 </template>
 <script>

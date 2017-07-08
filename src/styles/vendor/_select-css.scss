@@ -12,7 +12,8 @@ h1 {
 // ==================================================/
 
 .custom-select1_01 {
-  border: 1px solid #bbb;
+  @extend %display--inline-block;
+  border: 1px solid #000;
   // border-radius: 2px;
   // box-shadow: 
   background: #f3f3f3; // Old browsers 
@@ -55,13 +56,13 @@ h1 {
 // bg gradient, corners, etc.
 .custom-select1_01 {
   @extend %pos--relative;
-  @extend %display--inline-block;
-  
+  // @extend %display--block;
+
   // This is the native select, we're making everything but the text invisible so
   // we can see the button styles in the wrapper 
   select {
     // set height(optional) below:
-    // height: inherit;
+    height: inherit;
     // Prefixed box-sizing rules necessary for older browsers
     @include box-sizing(border-box);
     width: 100%;
@@ -79,7 +80,7 @@ h1 {
     @extend %pos--absolute;
     content: " ";
     top: 50%;
-    right: 1em;
+    right: 0.5em;
     z-index: 2;
     // These hacks make the select behind the arrow clickable in some browsers
     pointer-events: none;

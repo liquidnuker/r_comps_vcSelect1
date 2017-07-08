@@ -23,12 +23,31 @@
 // mobile portrait (320x480) 
 @include mq($from: mobile) {
   .vcselect1 {
-    height: 30px;
+    height: auto;
+  }
+
+  input[type=button] {
+    // for centering
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
 
 // *mobile landscape (480x320)
 @include mq($from: mobileLandscape) {
+  .vcselect1 {
+    height: 30px;
+  }
+
+  input[type=button] {
+    // to remove centering
+    width: auto;
+    display: inline-block;
+    margin: 0;
+  }
+
   input[type=text],
   input[type=button],
   .custom-select1_01 {
